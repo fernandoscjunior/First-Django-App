@@ -12,3 +12,5 @@ class Receita(models.Model):
     rendimento = models.TextField(max_length=150)
     categoria = models.CharField(max_length=150)
     data_receita = models.DateTimeField(default=datetime.now, blank=True)
+    publicada = models.BooleanField(default=False)
+    foto_receita = models.ImageField(upload_to='fotos/%d/%m/%Y/', blank=True)
