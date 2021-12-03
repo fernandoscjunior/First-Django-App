@@ -33,3 +33,4 @@ def buscar(request):
     }
 
     return render(request, 'buscar.html', dados)
+
