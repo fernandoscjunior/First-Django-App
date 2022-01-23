@@ -3,6 +3,7 @@ from receitas.models import Receita
 
 
 def buscar(request):
+    """Realiza uma busca por nome """
     lista_receitas = Receita.objects.order_by('-data_receita').filter(publicada=True)
 
     if 'buscar' in request.GET:
